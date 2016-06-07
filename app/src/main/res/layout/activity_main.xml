@@ -4,10 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="kr.hs.emirim.qls6521.simpledialog.MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#ffe0e0">
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/but_text"/>
+    android:layout_marginTop="30dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/but_text"
+    android:id="@+id/but_dialog"
+    android:layout_gravity="center_horizontal"
+    android:background="#ffffff"
+    android:textColor="#000000"
+    />
 </LinearLayout>
