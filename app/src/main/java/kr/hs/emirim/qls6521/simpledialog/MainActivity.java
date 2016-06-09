@@ -9,6 +9,7 @@ import android.widget.*;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     String[] items={"젤리빈","킷캣","롤리팝"};//1차원 배열을 만들기
+    boolean[] checkArr={true,false,false};
     Button but;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,10 +32,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 but.setText(items[which]);
             }
         });*/
-        dialog.setSingleChoiceItems(items, 0, new DialogInterface.OnClickListener() {
+        /*dialog.setSingleChoiceItems(items, 0, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 but.setText(items[which]);
+            }
+        });*/
+
+        dialog.setMultiChoiceItems(items, checkArr, new DialogInterface.OnMultiChoiceClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which, boolean isChecked) {
+               but.setText(items[which]);
             }
         });
         dialog.setIcon(R.drawable.first_icon);
