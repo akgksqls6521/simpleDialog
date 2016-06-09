@@ -25,7 +25,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         AlertDialog.Builder dialog=new AlertDialog.Builder(this);//액티비티의 문맥을 말하는것이다.-> 현재 액티비티 반환받는것 !!
         // 만약 this를 쓸 경우 현재 액티비티를 말하는 것
         dialog.setTitle("안녕 한빈!");
-        dialog.setItems(items, new DialogInterface.OnClickListener() {
+        /*dialog.setItems(items, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                but.setText(items[which]);
+            }
+        });*/
+        dialog.setSingleChoiceItems(items, 0, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 but.setText(items[which]);
